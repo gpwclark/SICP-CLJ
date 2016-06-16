@@ -1,8 +1,9 @@
+;; Recursive and iterative impl of following function:
+;; f(n) = n   if n < 3
+;; f(n) = f(n-1)+2*f(n-2)+3*f(n-3) if n >= 3
+
 (ns sicp.chapter1.e11
   (:gen-class))
-
-;;TODO make test and fix integer overflow error
-;; Exercise 1.11
 
 (defn iter-impl-help [count n n1 n2 n3] ;;vec_size (count answer-vec)
   (let [result (+ n1

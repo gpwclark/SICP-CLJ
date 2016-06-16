@@ -1,3 +1,5 @@
+;; Write iterative exponentiator that computers results in O(log(n)).
+
 (ns sicp.chapter1.e16
   (:gen-class))
 

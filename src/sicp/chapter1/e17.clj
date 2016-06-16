@@ -1,3 +1,6 @@
+;; Write fcn to multiple 2 numbers that can only use +,-,double, and halve
+;; and computers results in O(log(n)).
+
 (ns sicp.chapter1.e17
   (:gen-class))
 
@@ -14,8 +17,8 @@
       a
       (+ a left))
     (if (even? counter)
-      (log*-help (double a) (halve counter) left (inc ops))
-      (log*-help  a (- counter 1) a (inc ops)))))
+      (recur (double a) (halve counter) left (inc ops))
+      (recur  a (- counter 1) a (inc ops)))))
 
 (defn log* [a b]
   (log*-help a b 1 1))

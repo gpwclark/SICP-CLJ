@@ -1,3 +1,5 @@
+;; computer elements of pascals triangle recursively.
+
 (ns sicp.chapter1.e12
   (:gen-class))
 
