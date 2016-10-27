@@ -54,7 +54,7 @@
 (defn numer-pattern [p]
   (let [numer (wallis-pattern-from 4 p)
         last-num (+ 4 (* 2 (- p 1)))]
-    (* numer (/ numer last-num))))
+    (* numer (/ numer last-num)))
 
 (defn denom-pattern [p]
   (let [denom (wallis-pattern-from 1 p)]
@@ -68,3 +68,4 @@
   (let [numer (numer-pattern this-precise)
         denom (denom-pattern this-precise)]
     (* 8 (/ numer denom))))
+
